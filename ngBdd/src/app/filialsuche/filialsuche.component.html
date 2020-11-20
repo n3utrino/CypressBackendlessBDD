@@ -1,0 +1,8 @@
+<p>filialsuche works!</p>
+<ol>
+  <li *ngFor="let filiale of filialen" [ngClass]="{'selected': filiale === selectedFiliale}"
+      [attr.data-filiale-id]="filiale.id" (click)="select(filiale)">
+    {{filiale.name}}-{{filiale.id}}
+  </li>
+</ol>
+<button (click)="onWeiter()">Auswählen</button>

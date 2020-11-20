@@ -1,0 +1,9 @@
+<p>terminauswahl works!</p>
+<ol>
+  <li *ngFor="let termin of termine" [ngClass]="{'selected': termin.id === selectedId}" [attr.data-termin-id]="termin.id" (click)="select(termin.id)">
+    {{termin.name}}-{{termin.id}}
+  </li>
+</ol>
+<button (click)="nextWeek()">Nächste Woche</button>
+<button (click)="weiter()">Weiter</button>
+<p data-message-component>{{meldung}}</p>
